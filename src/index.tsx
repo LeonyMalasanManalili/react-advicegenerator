@@ -1,19 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+//importazione della pagina App (elemento da inserire nel html)
+import AdviceGenerator from "./App";
 
+//questo è l'index tsx che prende prende la root dell'index.html
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+//infatti qui gli inseriamo i pezzi da incastonare per reallizare la pagina web con Render.
 root.render(
   <React.StrictMode>
-    <App />
+    {/* questa sarebbe la pagina app.tsx pre-creata di base ma cambiata in = AdviceGenerator  */}
+    <AdviceGenerator />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
